@@ -53,15 +53,7 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	//define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
-
-	if(isset($_SERVER['SERVER_ENVIRONMENT'])){
-	 define('ENVIRONMENT', $_SERVER['SERVER_ENVIRONMENT']); 
- 	}else if(isset($_ENV['SERVER_ENVIRONMENT'])){
-	 define('ENVIRONMENT', $_ENV['SERVER_ENVIRONMENT']); 
- 	}else{
-	 define('ENVIRONMENT', 'development'); 
- }
+	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
 /*
  *---------------------------------------------------------------
@@ -98,7 +90,7 @@ switch (ENVIRONMENT)
  * This variable must contain the name of your "system" directory.
  * Set the path if it is not in the same directory as this file.
  */
-	$system_path = '../xyz_sys';
+	$system_path = 'xyz_sys';
 
 /*
  *---------------------------------------------------------------
@@ -115,7 +107,7 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$application_folder = '../xyz_app';
+	$application_folder = 'xyz_app';
 
 /*
  *---------------------------------------------------------------
